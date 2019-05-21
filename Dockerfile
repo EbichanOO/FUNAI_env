@@ -7,6 +7,6 @@ RUN apt-get install -y cmake
 RUN apt-get install -y swig
 RUN pip install -r ./workspace/requirements.txt
 RUN pip install opencv-python==3.4.2.17 --trusted-host pypi.python.org
-#RUN jupyter notebook ./workspace/dl4us/ --port 8888
 
-CMD echo "plz run docker-machine ip and run http://ip:8888"
+CMD jupyter notebook ./workspace/ --port 80 --ip=0.0.0.0 --allow-root
+CMD echo "plz run docker-machine ip and access http://ip:8080/?token=~~"
