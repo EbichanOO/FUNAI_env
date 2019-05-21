@@ -3,7 +3,7 @@ FROM python:3
 RUN apt-get update
 RUN mkdir workspace
 COPY dl4us ./workspace/
-#RUN pip install -r ./workspace/dl4us/requirements.txt
+RUN pip install -r requirements.txt
 RUN pip install opencv-python==3.4.2.17 --trusted-host pypi.python.org
 #RUN jupyter notebook ./workspace/dl4us/ --port 8888
 
